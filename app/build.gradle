@@ -9,7 +9,7 @@ android {
             keyAlias 'xxlvyou'
             keyPassword '123456'
             storeFile file('C:/Users/Administrator/Desktop/xxlvyou.keystore')
-            storePassword 'Pro123456F'
+            storePassword '123456'
         }
     }
     defaultConfig {
