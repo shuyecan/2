@@ -86,7 +86,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/driver_account_rechange"
+            android:id="@+id/lin_kaishi"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_weight="1"

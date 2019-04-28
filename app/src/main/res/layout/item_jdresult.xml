@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    
+    <ImageView
+        android:layout_margin="@dimen/dp_10"
+        android:id="@+id/img_jd"
+        android:layout_width="110dp"
+        android:layout_height="95dp"
+        android:src="@drawable/glz"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/text_jd_title"
+        android:gravity="center"
+        android:layout_alignTop="@+id/img_jd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_jd"
+        android:textColor="@color/title_black"
+        android:textSize="19sp"
+        android:text="古隆中"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/text_jd_title"
+        android:layout_toRightOf="@+id/img_jd"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/lin_xiangqing"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_xiangqing"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textSize="@dimen/sp_12"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详情"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_yuying"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_yuyin"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textSize="@dimen/sp_12"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="语音播报"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_daohang"
+            android:orientation="vertical"
+
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_daohang"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textSize="@dimen/sp_12"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导航"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
