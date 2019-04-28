@@ -3,7 +3,6 @@ package com.xxdainiyou.apther;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.xxdainiyou.Activity.DaohangActivity;
+import com.xxdainiyou.Activity.WNaviGuideActivity;
 import com.xxdainiyou.R;
 import com.xxdainiyou.been.Memorandbeen;
 
@@ -22,6 +21,11 @@ import java.util.List;
 public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
     private List<Memorandbeen> list;
     private Context context;
+    OnPlayClickListener onItemPlayClick;
+    public static interface OnPlayClickListener {
+        public void onItemClick(Memorandbeen position);
+    }
+
 
     public Memoraapther(List<Memorandbeen> list, Context context) {
         this.list = list;
@@ -47,8 +51,7 @@ public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
             viewHolder.lin_daohang.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context,DaohangActivity.class);
-                    context.startActivity(intent);
+                    onItemPlayClick.onItemClick(memorandbeen);
                 }
             });
     }
@@ -72,5 +75,9 @@ public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
             text_jd_title = itemView.findViewById(R.id.text_jd_title);
             img_jd = itemView.findViewById(R.id.img_jd);
         }
+    }
+
+    public void setOnPlayClickListener(OnPlayClickListener onItemPlayClick) {
+        this.onItemPlayClick = onItemPlayClick;
     }
 }
