@@ -45,7 +45,7 @@ public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
             viewHolder.lin_daohang.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    
                 }
             });
     }
