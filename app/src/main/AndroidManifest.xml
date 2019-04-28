@@ -55,7 +55,8 @@
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.RegisterActivity" />
         <activity android:name=".Activity.ScenicspotresultsActivity" />
-        <activity android:name=".Activity.DaohangActivity"></activity>
+        <activity android:name=".Activity.DaohangActivity" />
+        <activity android:name=".Activity.WNaviGuideActivity"></activity>
     </application>
 
 </manifest>

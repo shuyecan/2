@@ -1,6 +1,7 @@
 package com.xxdainiyou.apther;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.xxdainiyou.Activity.DaohangActivity;
 import com.xxdainiyou.R;
 import com.xxdainiyou.been.Memorandbeen;
 
@@ -45,7 +47,8 @@ public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
             viewHolder.lin_daohang.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    
+                    Intent intent = new Intent(context,DaohangActivity.class);
+                    context.startActivity(intent);
                 }
             });
     }
