@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     
     
@@ -23,7 +36,7 @@
 
 
         <LinearLayout
-            android:id="@+id/driver_check"
+            android:id="@+id/lin_xingchen"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_width="0dp"
@@ -44,7 +57,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/driver_password"
+            android:id="@+id/lin_gonglue"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_weight="1"
@@ -65,7 +78,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/driver_info"
+            android:id="@+id/lin_tianqi"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_weight="1"
@@ -108,4 +121,91 @@
 
     </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/colorGray_g" />
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:text="为您推荐:"
+            android:textColor="@color/title_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/main_card_item1"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_margin="@dimen/dp_10"
+                    android:id="@+id/img_jd"
+                    android:layout_width="110dp"
+                    android:layout_height="95dp"
+                    android:src="@drawable/glz"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:id="@+id/text_jd_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/img_jd"
+                    android:gravity="center"
+                    android:text="古隆中"
+                    android:textColor="@color/title_black"
+                    android:textSize="19sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/main_card_item2"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            android:layout_marginHorizontal="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_margin="@dimen/dp_10"
+                    android:id="@+id/img_jd2"
+                    android:layout_width="110dp"
+                    android:layout_height="95dp"
+                    android:src="@drawable/glz"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:id="@+id/text_jd_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/img_jd2"
+                    android:gravity="center"
+                    android:text="三顾堂"
+                    android:textColor="@color/title_black"
+                    android:textSize="19sp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

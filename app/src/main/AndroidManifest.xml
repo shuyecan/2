@@ -61,7 +61,8 @@
             android:name=".Activity.XiangqinActivity"
             android:label="@string/title_activity_xiangqin"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Activity.UserInfoActivity"></activity>
+        <activity android:name=".Activity.UserInfoActivity" />
+        <activity android:name=".Activity.NotActivity"></activity>
     </application>
 
 </manifest>

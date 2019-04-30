@@ -79,6 +79,7 @@ public class myfragment extends Fragment {
                 userBeen.save();
                 intent= new Intent(getActivity(),LoginActivity.class);
                 startActivity(intent);
+                getActivity().finish();
                 break;
         }
     }
@@ -97,7 +98,5 @@ public class myfragment extends Fragment {
         super.onDestroy();
         userBeen.setIslogin("");
         userBeen.save();
-        Intent intent = new Intent(getActivity(),LoginActivity.class);
-        startActivity(intent);
     }
 }
