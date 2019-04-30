@@ -99,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
     private void inittooler() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("襄襄旅游");

@@ -50,6 +50,16 @@
             android:text="请登陆"
             android:textColor="@color/black"
             android:textSize="21sp" />
+
+        <TextView
+            android:layout_marginLeft="22dp"
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </RelativeLayout>
     <!--<LinearLayout-->
     <!--android:layout_width="0dp"-->
@@ -74,7 +84,7 @@
             android:paddingTop="1dp">
 
             <LinearLayout
-                android:id="@+id/driver_binding_referrer"
+                android:id="@+id/user_info_referrer"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/click_bg1"
@@ -299,6 +309,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.1dp"
                 android:background="@color/colorLine" />
+
+
+            <Button
+                android:id="@+id/user_loginout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/light_red"
+                android:bottomLeftRadius="5dp"
+                android:bottomRightRadius="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="退出登录"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:topLeftRadius="5dp"
+                android:topRightRadius="5dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

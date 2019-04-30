@@ -28,6 +28,9 @@ import com.baidu.mapapi.model.LatLng;
 import com.xxdainiyou.MainActivity;
 import com.xxdainiyou.R;
 import com.xxdainiyou.Utils.SDKReceiver;
+import com.xxdainiyou.been.Mylocation;
+
+import java.text.DecimalFormat;
 
 public class mudidifragmnet extends Fragment{
     View view;
@@ -118,6 +121,11 @@ public class mudidifragmnet extends Fragment{
                     // 此处设置开发者获取到的方向信息，顺时针0-360
                     .direction(location.getDirection()).latitude(location.getLatitude())
                     .longitude(location.getLongitude()).build();
+            Mylocation mylocation = new Mylocation();
+            mylocation.setWeidu(location.getLatitude());
+            mylocation.setJingdu(location.getLongitude());
+            mylocation.setLou("1");
+            mylocation.saveOrUpdate("lou = ?",mylocation.getLou());
             mBaiduMap.setMyLocationData(locData);
             if(isFirstLoc){
                 centerToLocation(location,250);

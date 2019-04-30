@@ -23,7 +23,9 @@ public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
     private Context context;
     OnPlayClickListener onItemPlayClick;
     public static interface OnPlayClickListener {
-        public void onItemClick(Memorandbeen position);
+        void onItemClick(Memorandbeen position);
+        void onXiangClick(Memorandbeen m);
+        void onYuying(Memorandbeen m);
     }
 
 
@@ -52,6 +54,18 @@ public class Memoraapther extends RecyclerView.Adapter<Memoraapther.ViewHolder>{
                 @Override
                 public void onClick(View v) {
                     onItemPlayClick.onItemClick(memorandbeen);
+                }
+            });
+            viewHolder.lin_xiangqing.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemPlayClick.onXiangClick(memorandbeen);
+                }
+            });
+            viewHolder.lin_yuying.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemPlayClick.onYuying(memorandbeen);
                 }
             });
     }

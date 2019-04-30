@@ -3,11 +3,17 @@
     <dbname value="mydata" >
 
     </dbname>
-    <version value="4">
+    <version value="7">
     </version>
 
     <list>
         <mapping class="com.xxdainiyou.been.Memorandbeen">
+        </mapping>
+
+        <mapping class="com.xxdainiyou.been.Mylocation">
+        </mapping>
+
+        <mapping class="com.xxdainiyou.been.UserBeen">
         </mapping>
     </list>
 </litepal>

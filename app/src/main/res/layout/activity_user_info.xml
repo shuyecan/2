@@ -18,13 +18,14 @@
         android:paddingRight="@dimen/activity_body_padding" >
 
         <EditText
+            android:enabled="false"
             android:id="@+id/reg_phone"
             style="@style/loginEditStyle"
             android:hint="请输入手机号"
             android:inputType="phone"
             android:maxLength="11"
             android:maxLines="1" >
-            <requestFocus />
+
         </EditText>
 
         <TextView
@@ -48,6 +49,7 @@
             android:inputType="textPassword"
             android:maxLength="11"
             android:maxLines="1" >
+            <requestFocus />
         </EditText>
 
         <TextView
@@ -131,7 +133,7 @@
         android:layout_marginRight="@dimen/activity_body_padding"
         android:layout_marginTop="10dp"
         android:background="@drawable/btn_login_color"
-        android:text="注册"
+        android:text="修改"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 </LinearLayout>

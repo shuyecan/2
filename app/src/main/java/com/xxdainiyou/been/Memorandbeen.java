@@ -2,12 +2,32 @@ package com.xxdainiyou.been;
 
 import org.litepal.crud.LitePalSupport;
 
-public class Memorandbeen extends LitePalSupport {
+import java.io.Serializable;
+
+public class Memorandbeen extends LitePalSupport implements Serializable {
     String content;
     String address;
     String iscall;
     String time;
     String img;
+    double jing;
+    double weidu;
+
+    public double getJing() {
+        return jing;
+    }
+
+    public void setJing(double jing) {
+        this.jing = jing;
+    }
+
+    public double getWeidu() {
+        return weidu;
+    }
+
+    public void setWeidu(double weidu) {
+        this.weidu = weidu;
+    }
 
     public String getImg() {
         return img;
