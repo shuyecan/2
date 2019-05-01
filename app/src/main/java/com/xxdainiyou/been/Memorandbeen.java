@@ -4,7 +4,7 @@ import org.litepal.crud.LitePalSupport;
 
 import java.io.Serializable;
 
-public class Memorandbeen extends LitePalSupport implements Serializable {
+public class Memorandbeen extends LitePalSupport implements Serializable,Comparable<Memorandbeen>{
     String content;
     String address;
     String iscall;
@@ -12,6 +12,15 @@ public class Memorandbeen extends LitePalSupport implements Serializable {
     String img;
     double jing;
     double weidu;
+    Double juli;
+
+    public Double getJuli() {
+        return juli;
+    }
+
+    public void setJuli(Double juli) {
+        this.juli = juli;
+    }
 
     public double getJing() {
         return jing;
@@ -67,5 +76,10 @@ public class Memorandbeen extends LitePalSupport implements Serializable {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    @Override
+    public int compareTo(Memorandbeen memorandbeen) {
+        return this.getJuli().compareTo(memorandbeen.getJuli());
     }
 }

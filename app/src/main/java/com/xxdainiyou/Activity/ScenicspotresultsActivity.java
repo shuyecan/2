@@ -36,6 +36,7 @@ import org.litepal.LitePal;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
@@ -56,7 +57,7 @@ public class ScenicspotresultsActivity extends AppCompatActivity {
     PopupWindow window;
     RecyclerView recyclerView;
     MediaPlayer mediaPlayer;
-
+    double chaju = 0;
     List<Memorandbeen> resultlist = new ArrayList<>();
     QuerybynameAdapter adapter;
     private WalkNaviLaunchParam walkParam;
@@ -141,6 +142,18 @@ public class ScenicspotresultsActivity extends AppCompatActivity {
 
 
         List<Memorandbeen> memorandbeens = LitePal.findAll(Memorandbeen.class);
+        List<Mylocation> mylocations =LitePal.where("lou = ?","1").find(Mylocation.class);
+        double myjing = mylocations.get(0).getJingdu();
+        double mywei = mylocations.get(0).getWeidu();
+        for (int i =-0;i<memorandbeens.size();i++){
+            double jingdu = memorandbeens.get(i).getJing();
+            double weidu = memorandbeens.get(i).getWeidu();
+            double jingducha = jingdu - myjing;
+            double weiducha = weidu - mywei;
+            double juli = (jingducha*jingducha + weiducha*weiducha);
+            memorandbeens.get(i).setJuli(juli);
+        }
+        Collections.sort(memorandbeens);
         list.addAll(memorandbeens);
         memoraapther = new Memoraapther(list,getApplicationContext());
         GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
